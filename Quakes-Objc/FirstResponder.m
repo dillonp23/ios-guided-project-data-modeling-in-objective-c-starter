@@ -8,7 +8,17 @@
 
 #import "FirstResponder.h"
 
+//@interface FirstResponder () {
+//    NSString *_name;
+//}
+//
+//@end
+
 @implementation FirstResponder
+
+@synthesize name = _name;
+//Can also do it like this
+// @synthesize name = myInternalName;
 
 - (void)setName:(NSString *)name // if you override the setter then you;re responsible for dong everything - nno super class for setter
 {
@@ -19,6 +29,11 @@
     
     // didSet
     
+}
+
+- (NSString *)name
+{
+    return _name.copy;
 }
 
 @end

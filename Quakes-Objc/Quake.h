@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 // since these are marked read only we're going to need a custom initializer to set these properties
 @property (nonatomic, readonly) double magnitude;
 @property (nonatomic, readonly, copy) NSString *place; // use * when it is an objective-c object
-@property (nonatomic) NSDate *date;
+@property (nonatomic) NSDate *time;
 @property (nonatomic, readonly) double latitude;
 @property (nonatomic, readonly) double longitude;
 

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LSILog.h"
+#import "FirstResponder.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,18 @@
     
     
     NSLog(@"Hey Quakes!");
+    
+    FirstResponder *firstResponder = [[FirstResponder alloc] init];
+    
+    NSLog(@"firstResponder: %@", firstResponder);
+    firstResponder.name = @"Dillon";
+    NSLog(@"firstResponder.name: %@", firstResponder.name); // use the getter to do something every time this accessed
+    
+    // Objective-C : nil
+    // C: NULL
+    // Primitive (int, double, etc): 0
+    
+    
 }
 
 

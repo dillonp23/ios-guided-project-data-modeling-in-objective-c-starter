@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
                          latitude:(double)latitude
                         longitude:(double)longitude;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 // since these are marked read only we're going to need a custom initializer to set these properties
 @property (nonatomic, readonly) double magnitude;
 @property (nonatomic, readonly, copy) NSString *place; // use * when it is an objective-c object

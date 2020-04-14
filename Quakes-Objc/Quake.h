@@ -12,7 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Quake : NSObject
 
-
+- (instancetype)initWithMagnitude:(double)magnitude
+                            place:(NSString *)place
+                             time:(NSDate *)time
+                         latitude:(double)latitude
+                        longitude:(double)longitude;
 
 // since these are marked read only we're going to need a custom initializer to set these properties
 @property (nonatomic, readonly) double magnitude;

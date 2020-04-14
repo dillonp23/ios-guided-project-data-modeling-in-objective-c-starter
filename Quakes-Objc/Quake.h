@@ -16,9 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
                             place:(NSString *)place
                              time:(NSDate *)time
                          latitude:(double)latitude
-                        longitude:(double)longitude;
+                        longitude:(double)longitude
+                            type:(NSString *)type
+                            alert:(NSString *)alert NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary; // nullable = this initializer can return nil
 
 // since these are marked read only we're going to need a custom initializer to set these properties
 @property (nonatomic, readonly) double magnitude;
@@ -26,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSDate *time;
 @property (nonatomic, readonly) double latitude;
 @property (nonatomic, readonly) double longitude;
+
+@property (nonatomic, readonly, copy) NSString *type;
+@property (nonatomic, readonly, copy) NSString *alert;
 
 @end
 
